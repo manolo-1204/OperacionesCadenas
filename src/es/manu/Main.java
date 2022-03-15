@@ -27,8 +27,12 @@ public class Main {
             opcion = entrada.nextInt();
             System.out.println();
 
-            switch (opcion)
+            switch (opcion) {
                 case 1:
+                    for (int i = 0; i < textico.length(); i++) {
+                        if (textico.charAt(i) != ' ') contador++; //ta mal
+                    }
+            }
 
         } while (opcion != 0);
     }
