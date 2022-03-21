@@ -58,33 +58,35 @@ public class Main {
                     System.out.println("¿Qué carácter quieres cambiar? ");
                     sustituido = entrada.nextLine().charAt(0);
 
-                    System.out.print("¿Por que carácter quieres cambiarlo? ");
+                    System.out.println("¿Por que carácter quieres cambiarlo? ");
                     sustituir = entrada.nextLine().charAt(0);
 
                     for (int i = 0; i < textico.length(); i++) {
                         if (textico.charAt(i) == sustituido) {
-                            textico.charAt(i) = sustituir;
+                            System.out.print(sustituir);
+                        } else {
+                            System.out.print(textico.charAt(i));
                         }
                     }
-                    System.out.println(textico);
 
                     break;
                 case 4:
                     System.out.println("Esta es la oración al revés: ");
-                    for (int i = textico.length(); i > 0; i--) {
-                        System.out.print(textico.charAt(i - 1));
+                    for (int i = textico.length() - 1; i >= 0; i--) {
+                        System.out.print(textico.charAt(i));
                     }
                     System.out.println();
 
                     break;
                 case 0:
-                    System.out.println("¡Hasta luego!");
+                    System.out.print("¡Hasta luego!");
                     break;
                 default:
-                    System.out.println("ERROR: la opción " + opcion + " no existe.");
+                    System.out.print("ERROR: la opción " + opcion + " no existe.");
             }
 
             entrada.nextLine();
+            System.out.println();
             System.out.print("Pulsa intro para continuar...");
             entrada.nextLine();
 
